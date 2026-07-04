@@ -27,10 +27,33 @@ const posts = [
         likes: 152
     }
 ];
+let mainEl= document.getElementById("main-el")
+let i = Number(Math.floor((Math.random())*3))
+console.log(i)
 
 posts.forEach((post) =>{
     const html = `
+    <div class="post-header">
+                <img src=${posts[i].avatar} alt="" class="pfp">
+                <div>
+                 <h1>
+                    ${posts[i].name}
+                </h1>
+                <h2>
+                    ${posts[i].location}
+                </h2>   
+                </div>
+            </div>
+            <img src=${posts[i].post} alt="" class="post-img">
+            <div class="icons">
+                 <img src="images/icon-heart.png" alt="like logo" class="icon">
+                 <img src="images/icon-comment.png" alt=" comment logo" class="icon">
+                 <img src="images/icon-dm.png" alt="share logo" class="icon">
+            </div>
+            <p id="likes">${posts[i].likes} likes</p>
+            <p id="comment"><span class="cmt-usrname">${posts[i].username}</span> ${posts[i].comment}</p>
+
     
     `
-    console.log(html)
+    mainEl.innerHTML = html
 });
