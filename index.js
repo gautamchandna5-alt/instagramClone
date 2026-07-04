@@ -26,5 +26,11 @@ const posts = [
         comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
         likes: 152
     }
-]
+];
 
+posts.forEach((post) =>{
+    const html = `
+    
+    `
+    console.log(html)
+});
